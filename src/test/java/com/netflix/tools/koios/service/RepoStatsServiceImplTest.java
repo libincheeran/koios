@@ -17,7 +17,7 @@ import static org.mockito.Mockito.verify;
 @ExtendWith(MockitoExtension.class)
 @RunWith(JUnitPlatform.class)
 @MockitoSettings(strictness = Strictness.LENIENT)
-class ReportingServiceImplTest {
+class RepoStatsServiceImplTest {
 
     @Mock
     private GitHubClient gitHubClient;
@@ -26,7 +26,7 @@ class ReportingServiceImplTest {
     private RenderService renderService;
 
     @InjectMocks
-    private ReportingServiceImpl reportingService;
+    private RepoStatsServiceImpl reportingService;
 
     @Test
     void displayRepoByStars() {

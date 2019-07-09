@@ -1,6 +1,6 @@
 package com.netflix.tools.koios.service;
 
-public interface ReportingService {
+public interface RepoStatsService {
 
 
     void displayRepoByStars(int topN, String repoName);

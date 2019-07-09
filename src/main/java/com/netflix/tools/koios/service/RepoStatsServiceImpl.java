@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 import java.util.List;
 
 @Component
-public class ReportingServiceImpl implements ReportingService {
+public class RepoStatsServiceImpl implements RepoStatsService {
 
     @Autowired
     private GitHubClient gitHubClient;

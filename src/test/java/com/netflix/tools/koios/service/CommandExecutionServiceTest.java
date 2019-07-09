@@ -21,7 +21,7 @@ import static org.mockito.Mockito.verify;
 class CommandExecutionServiceTest {
 
     @Mock
-    private ReportingService reportingService;
+    private RepoStatsService repoStatsService;
 
     @InjectMocks
     private CommandExecutionService commandExecutionService;
@@ -31,9 +31,9 @@ class CommandExecutionServiceTest {
 
         commandExecutionService.run();
 
-        verify(reportingService, atMost(1)).displayRepoByStars(anyInt(), anyString());
-        verify(reportingService, atMost(1)).displayRepoByForks(anyInt(), anyString());
-        verify(reportingService, atMost(1)).displayRepoByPrs(anyInt(), anyString());
-        verify(reportingService, atMost(1)).displayRepoByContribution(anyInt(), anyString());
+        verify(repoStatsService, atMost(1)).displayRepoByStars(anyInt(), anyString());
+        verify(repoStatsService, atMost(1)).displayRepoByForks(anyInt(), anyString());
+        verify(repoStatsService, atMost(1)).displayRepoByPrs(anyInt(), anyString());
+        verify(repoStatsService, atMost(1)).displayRepoByContribution(anyInt(), anyString());
     }
 }

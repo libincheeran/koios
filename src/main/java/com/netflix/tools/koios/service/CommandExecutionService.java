@@ -9,7 +9,7 @@ import picocli.CommandLine;
 public class CommandExecutionService implements Runnable {
 
     @Autowired
-    private ReportingService reportingService;
+    private RepoStatsService repoStatsService;
 
     @CommandLine.Option(names = {"-n", "--top-n"}, required = true, description = "The top N number of records.",
             defaultValue = "10")
@@ -21,9 +21,9 @@ public class CommandExecutionService implements Runnable {
     @Override
     public void run() {
 
-        reportingService.displayRepoByStars(topN, orgName);
-        reportingService.displayRepoByForks(topN, orgName);
-        reportingService.displayRepoByPrs(topN, orgName);
-        reportingService.displayRepoByContribution(topN, orgName);
+        repoStatsService.displayRepoByStars(topN, orgName);
+        repoStatsService.displayRepoByForks(topN, orgName);
+        repoStatsService.displayRepoByPrs(topN, orgName);
+        repoStatsService.displayRepoByContribution(topN, orgName);
     }
 }
